@@ -3,3 +3,6 @@ bower_components
 node_modules
 scratch
 build
+dist
+*.log
+.node-version
