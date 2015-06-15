@@ -1,6 +1,7 @@
 var path = require('path');
 var bower_dir = __dirname + '/bower_components';
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var Clean = require('clean-webpack-plugin');
 
 var config = {
   addVendor: function (name, path) {
@@ -27,6 +28,7 @@ var config = {
 };
 
 config.addVendor('react', bower_dir + '/react/react.min.js');
+config.addVendor('moment', bower_dir + '/moment/min/moment.min.js');
 
 module.exports = function(options) {
 
@@ -34,6 +36,10 @@ module.exports = function(options) {
     path: path.resolve(__dirname, options.outputFolder),
     filename: options.outputFilename
   };
+
+  config.plugins.push(
+    new Clean([options.outputFolder])
+  );
 
   return config;
 };

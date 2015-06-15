@@ -1,3 +1,5 @@
 var React = require('react');
 var AppComponent = require('./AppComponent.js');
-React.render(<AppComponent/>, document.getElementById('main'));
+var Timer = require('./Timer.js');
+React.render(<AppComponent/>, document.getElementById('when'));
+React.render(<Timer/>, document.getElementById('timer'));
