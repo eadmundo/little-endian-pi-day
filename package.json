@@ -11,7 +11,8 @@
     "build": "webpack",
     "build-prod": "webpack -p --config webpack.config.prod.js",
     "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "bash deploy.sh"
   },
   "author": "Edward Stone",
   "license": "ISC",
