@@ -4,6 +4,7 @@ GITHUB_PATH="https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}"
 cd ${TRAVIS_BUILD_DIR}
 git config user.name "Travis CI"
 git config user.email "travis@littleendianpiday.org"
+git config push.default simple
 git remote set-url --push origin $GITHUB_PATH
 git remote set-branches --add origin gh-pages
 git fetch -q
