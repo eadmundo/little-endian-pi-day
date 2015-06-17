@@ -10,6 +10,6 @@ git fetch -q
 git checkout gh-pages
 git ls-tree --name-only gh-pages | grep -v -e '.gitignore\|.nojekyll\|CNAME' | xargs rm -r
 cp dist/* .
-git add .
+git add --all
 git commit -m "Deployed from Travis CI"
-git push -f -q $GITHUB_PATH origin gh-pages
+git push -f
